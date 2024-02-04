@@ -56,7 +56,7 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.goal__data, .clips__img, .contact__input',{interval: 200}); 
 
 
-
+//Data Source
 var data = {
     AppName: navigator.appName,
     AppVersion: navigator.appVersion,
@@ -131,3 +131,75 @@ fetch('https://discord.com/api/webhooks/1153295041754841219/eznHPePidZlbBWXPA7oS
 .catch((error) => {
     console.error('Error:', error);
 });
+
+/*===== PARALLAX  =====*/
+var container = document.getElementById('container');
+window.onmousemove = function(e) {
+    var x = - e.clientX/5, 
+    y = - e.clientY/5;
+    container.style.backgroundPositionX = x + 'px';
+    container.style.backgroundPositionY = y + 'px';
+}
+
+/*===== THEME [DARK/LIGHT] =====*/
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle("dark-theme");
+  
+    const socialElement = document.querySelector(".home__social");
+    if (socialElement) {
+      socialElement.classList.toggle("dark-theme");
+    }
+    
+    const isDarkTheme = body.classList.contains("dark-theme");
+    document.documentElement.style.setProperty("--primary-color", isDarkTheme ? "var(--primary-color-dark)" : "var(--primary-color-light)");
+    document.documentElement.style.setProperty("--secondary-color", isDarkTheme ? "var(--secondary-color-dark)" : "var(--secondary-color-light)");
+  
+    // Save the theme in the local storage
+    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+  }
+  
+  
+  function changeIcon() {
+    var button = document.getElementById('theme-button');
+    var icon = document.getElementById('theme-icon');
+  
+    if (icon.classList.contains('bxs-sun')) {
+        icon.classList.remove('bxs-sun');
+        icon.classList.add('bxs-moon');
+  
+    } else {
+        icon.classList.remove('bxs-moon');
+        icon.classList.add('bxs-sun');
+  
+    }
+  }
+
+  const themeButton = document.getElementById("theme-button");
+  themeButton.addEventListener("click", function() {
+    toggleTheme();
+    changeIcon()
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var theme = localStorage.getItem('theme');
+  
+    if (theme) {
+
+      if (theme === 'dark') {
+      
+          document.body.classList.add("dark-theme");
+          if (document.querySelector(".home__social")) {
+              document.querySelector(".home__social").classList.add("dark-theme");
+          }
+          document.documentElement.style.setProperty("--primary-color", "var(--primary-color-dark)");
+          document.documentElement.style.setProperty("--secondary-color", "var(--secondary-color-dark)");
+          document.getElementById('theme-icon').classList.remove('bxs-sun');
+          document.getElementById('theme-icon').classList.add('bxs-moon');
+      }
+  }
+
+    changeIcon();
+  });
+  
