@@ -72,6 +72,10 @@ sr.reveal('.home__data, .about__img, .goal__subtitle, goal__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.goal__data, .clips__img, .contact__input',{interval: 200}); 
+sr.reveal('.clip, .section-title, .clip-container, .clip-card, .clip-img, .imgRock, .overlayR, .soon-text, .watch', {});
+sr.reveal('.clip-card, .soon-text', {});
+sr.reveal('.home__social-icon-tiktok, .home__social-icon-twitch, .home__social-icon-instagram, .home__social-icon-discord', {});
+
 
 
 //Data Source
@@ -244,3 +248,13 @@ cards.forEach(card => {
         }
     });
 });
+
+       // Quando o conteúdo do site estiver totalmente carregado
+       window.addEventListener('load', () => {
+        // Esconde a tela de carregamento
+        const loadingScreen = document.getElementById('loadingScreen');
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 300); // Deve corresponder à duração da transição no CSS
+    });
