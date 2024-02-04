@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/_796eebc1-59d0-4025-a4e6-5770f51c8c6b.jpg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            // Carrega o conteúdo quando a página é carregada
+            $("#work-container").load("contentsoon.html #Works");
+        });
+        </script>
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+        <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+        
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <title>Wxrst Center</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">Wxrst</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#Clips" class="nav__link">Clips</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <button class="nav__item" id="theme-button">
+                            <i id="theme-icon" class='bx bxs-sun'></i>
+                        </button>
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Wxrst</span><br> <!--=====<span style="font-size: 14px; color: gray;">(😎)</span>=====--></h1>
+
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=KKAM57BCPB536" target="_blank" class="btn-donate">Donate Me</a>
+                </div>
+                
+                <div class="home__social">
+                    <a href="https://tiktok.com/@wxrst._" target="_blank" class="home__social-icon-tiktok"><i class='bx bxl-tiktok' ></i></a>
+                    <a href="https://www.twitch.tv/wxrst_" target="_blank" class="home__social-icon-twitch"><i class='bx bxl-twitch' ></i></a>
+                    <a href="https://www.instagram.com/wxrst._ " target="_blank" class="home__social-icon-instagram"><i class='bx bxl-instagram' ></i></a>
+                    <a href=" https://discord.gg/cuaXUHDXMt" target="_blank" class="home__social-icon-discord"><i class='bx bxl-discord ' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M 9.1902 145.964 C 45 1 137 50 200 23 C 249 10 280 -9 370.735 14.143 C 469 54 467.948 107.508 477.191 174.311 C 485.897 237.229 459 278 416.506 344.954 C 373.74 401.245 326.068 462.801 255.442 466.189 C 179.416 469.835 111.552 422.137 65.1576 361.805 C 12 310 -11 240 9 147 Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <image class="home__blob-img" x="50" y="110" href="assets/img/logo.jpg"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT 
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/boku_no_hero_academia___izuku_midoriya__deku__png_by_dglproductions_dejfxnt-pre.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Wxrst</h2>
+                        <p class="about__text"><strong style="font-size: 20px;">Just a little streamer, doing my best! I livestream myself playing Rocket League, Fortnite, GTA, and more! In my spare time I teach myself how to program more efficiently and make some websites.
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>=====-->
+
+            <!--===== GOALS 
+            <section class="skills section" id="goals">
+                <h2 class="section-title">Goals</h2>
+
+                <div class="goal__container bd-grid">          
+                    <div>
+                        <h2 class="goal__subtitle">Main Goals</h2>
+                        <p class="skills__text">My main goals are: <br>
+                            Twitch - 500 Followers <br>
+                            Instagram & TikTok - 1K followers <br>
+                            And as an extra goal, I do have a Discord Server in which I plan to have 500 members!</p><br>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-tiktok goal__icon'></i>
+                                <span class="skills__name">TikTok</span>
+                            </div>
+                            <div class="prog__bar perc_tiktok">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">10,9%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-twitch goal__icon' ></i>
+                                <span class="skills__name">Twitch</span>
+                            </div>
+                            <div class="prog__bar perc_twitch">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">17,7%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-instagram goal__icon'></i>
+                                <span class="skills__name">Instagram</span>
+                            </div>
+                            <div class="prog__bar perc_insta">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">1,4%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-discord goal__icon' ></i>
+                                <span class="skills__name">Discord</span>
+                            </div>
+                            <div class="prog__bar perc_disc">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">1,2%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/Deku-PNG-Photos.png" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>=====-->
+
+              <!--===== Clips =====-->
+            <section class="clip section" id="Clips">
+
+                <h2 class="section-title">Clips</h2>
+                
+                <div class="clip-container" id="clip-container">
+
+                    <div class="clip-card">
+                        <div class="clip-img">
+                            <img class="imgRock" src="assets/img/kisspng-rocket-league-video-game-psyonix-logo-decal-rocket-league-5adc0c2ee14b60.7446830915243704789228.png" alt="">
+                        </div>
+                        
+                        <div class="overlayR">
+                            <span class="soon-text">Rocket</span>
+                            <a href="https://www.tiktok.com/@wxrst._" target="_blank" class="watch">Watch on <i class='bx bxl-tiktok' ></i></a>
+                             <!-- Adicione o nome da categoria aqui -->
+                        </div>
+                    </div>
+                    <div class="clip-card">
+                        <div class="clip-img">
+                            <img class="imgRock" src="assets/img/Fortnite_F_lettermark_logo.png" alt="">
+                        </div>
+                        
+                        <div class="overlayF">
+                            <span class="soon-text">Fortnite</span>
+                            <a href="https://www.tiktok.com/@wxrst._" target="_blank" class="watch">Watch on <i class='bx bxl-tiktok' ></i></a>
+                             <!-- Adicione o nome da categoria aqui -->
+                        </div>
+                    </div>
+                    <div class="clip-card">
+                        <div class="clip-img">
+                            <img class="imgRock" src="assets/img/header_mobile2.jpg" alt="">
+                        </div>
+                        
+                        <div class="overlayC">
+                            <span class="soon-text">CsGo</span>
+                            <a href="https://www.tiktok.com/@wxrst._" target="_blank" class="watch">Watch on <i class='bx bxl-tiktok' ></i></a>
+                             <!-- Adicione o nome da categoria aqui -->
+                        </div>
+                    </div>
+                </div>
+
+          
+
+        
+            </section>
+            <!--===== WORK 
+            <section class="work section" id="Works">
+                <h2 class="section-title">Works</h2>
+                <div id="work-container">
+                   
+                </div>
+            </section> =====-->
+           
+    
+        
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="https://api.web3forms.com/submit" id="demo-form" method="POST" class="contact__form">
+
+                        <input type="hidden" name="access_key" value="54b7d82d-aae1-4890-8c70-3114c05d0d90">
+
+                        <input type="text" id="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                        title="Valid e-mail address including top-level domain" id="email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <!--===== recaptcha button 
+                        <button  class="g-recaptcha" 
+                        data-sitekey="6LcQ25QjAAAAAOZNiNFkQ4YujPcOYpeR5ZGSC2eH" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Submit</button> =====-->
+
+                        <input type="hidden" name="from_name" value="Website Contact">
+
+                        <button  class="contact__button button" type="submit">Send</button>
+
+                    </form>
+                </div>
+            </section>
+            <div id="result"> </div>
+        </main>
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Wxrst</p>
+            <div class="footer__social">
+                <a href="https://tiktok.com/@wxrst._" class="footer__icon"><i class='bx bxl-tiktok' ></i></a>
+                <a href="https://www.twitch.tv/wxrst_" class="footer__icon"><i class='bx bxl-twitch' ></i></a>
+                <a href="https://www.instagram.com/wxrst._ " class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href=" https://discord.gg/cuaXUHDXMt"class="footer__icon"><i class='bx bxl-discord ' ></i></a>
+            </div>
+
+          
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+
+          <!--===== Form js =====-->
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+
+            <!--===== Theme js =====-->
+            <script src="/public/assets/js/theme.js" async></script>
+              <!--===== Video js =====-->
+              <script src="/public/assets/js/video.js" async></script>
+            
+
+    </body>
+</html>

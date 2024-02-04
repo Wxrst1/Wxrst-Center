@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.initial-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+#startButton {
+  padding: 15px 25px;
+  font-size: 20px;
+  background-color: #ff0000;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+#startButton:hover {
+  background-color: #ff3333;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.options-screen {
+  display: none;
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+@keyframes blinkingText {
+  0% {
+    color: initial; /* Cor original do texto */
+  }
+  50% {
+    color: rgb(255, 255, 255); /* Cor que o texto terá durante a animação */
+  }
+  100% {
+    color: initial; /* Retorna à cor original do texto */
+  }
+}
+
+
+a:hover {
+  color: #ffffff;
+}
+/* Esconde as barras de rolagem padrão */
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.1); /* Cor de fundo da scrollbar */
+}
+
+/* Estilo da thumb (o "ponteiro" da scrollbar) */
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Cor da thumb da scrollbar */
+  border-radius: 3px;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.795); /* Cor de fundo da trilha da scrollbar */
+}
+/* Estilo da thumb quando hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Cor da thumb da scrollbar quando hover */
+}
+
+/* Esconde as setas de rolagem */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.ig {
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid white; /* Define uma borda branca como padrão */
+  transition: border 0.3s; /* Adiciona uma transição suave na mudança de borda */
+}
+
+.ig:hover {
+  border: 3px solid transparent; /* Define a borda como transparente quando o cursor estiver sobre o elemento */
+  border-image: linear-gradient(to right, #feda77, #d62976, #962fbf, #4f5bd5);
+  border-image-slice: 1;
+  animation: gradientBorder 2s infinite;
+}
+
+@keyframes gradientBorder {
+  0%, 100% {
+    border-image-source: linear-gradient(to right, #feda77, #d62976, #962fbf, #4f5bd5);
+  }
+  50% {
+    border-image-source: linear-gradient(to right, #4f5bd5, #962fbf, #d62976, #feda77);
+  }
+}
+
+.profile-image {
+  width: 150px; /* Defina o tamanho desejado */
+  height: 150px; /* Defina o tamanho desejado */
+  border-radius: 50%;
+  border: 2px solid white; /* Borda branca */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transição para a borda e sombra */
+}
+
+/* Efeito de pulso ao passar o cursor */
+.profile-image:hover {
+  animation: pulse 2.4s infinite; /* Animação de pulso */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    border-color: #00ff558e; /* Cor da borda */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  }
+  50% {
+    border-color: #00ff55; /* Cor da borda mais intensa */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  }
+}
+
+
+ </style>
+  <title>Seu Site</title>
+</head>
+<body>
+    <div class="initial-screen" id="initialScreen">
+        <button id="startButton">Click Here</button>
+      </div>
+      
+      <div class="options-screen" id="optionsScreen">
+        <img src="./assets/img/Deku-from-My-Hero-Academia-Step-10.webp" alt="" class="profile-image">
+
+        <ul>
+          <li><a class="ig">Your Dad</a></li>
+          <li><a class="ig">Your Mom</a></li>
+          <li><a class="ig">You</a></li>
+        </ul>
+      </div>
+  <script>
+const startButton = document.getElementById('startButton');
+const initialScreen = document.getElementById('initialScreen');
+const optionsScreen = document.getElementById('optionsScreen');
+
+startButton.addEventListener('click', () => {
+  initialScreen.style.display = 'none';
+  optionsScreen.style.display = 'block';
+});
+
+  </script>
+</body>
+</html>
