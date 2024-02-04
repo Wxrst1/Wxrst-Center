@@ -162,6 +162,9 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+#menu-icon {
+  transition: transform 0.3s ease;
+}
 
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -171,9 +174,13 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: rgb(17, 16, 16);
+    background-color:var(--primary-color);
     transition: .5s;
   }
+  .active::after {
+    display: none;
+}
+ 
 }
 
 .nav__item {
@@ -183,6 +190,7 @@ img {
 
 .nav__link {
   position: relative;
+  color: var(--secondary-color);
 
 }
 
@@ -205,35 +213,35 @@ img {
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  color: var(--secondary-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 #theme-button {
-  background-color: var(--primary-color);; /* Cor de fundo do botão */
-  border: none; /* Remove bordas */
-  color: white; /* Cor do texto */
+  background-color: var(--primary-color);
+  border: none; 
+  color: white; 
   border-radius: 50px;
   padding: 0px 10px;
   align-items: center;
-  text-decoration: none; /* Remove sublinhado */
+  text-decoration: none; 
   display: inline-block;
   font-size: 16px;
-  cursor: pointer; /* Muda o cursor para um ponteiro quando passa por cima */
-  transition-duration: 0.4s; /* Duração da transição */
+  cursor: pointer; 
+  transition-duration: 0.4s;
 }
 
 #theme-button:hover {
-  background-color: #a0a0a0; /* Cor de fundo do botão quando passa o mouse por cima */
-  color: white; /* Cor do texto quando passa o mouse por cima */
+  background-color: #a0a0a0; 
+  color: white; 
 }
 .bxs-sun {
-  color: #d3a239; /* Cor do sol */
+  color: #d3a239; 
 }
 
 .bxs-moon {
-  color: #131313; /* Cor da lua */
+  color: #131313; 
 }
 .home__social-icon-tiktok{
   width: max-content;
@@ -505,6 +513,7 @@ img {
     row-gap: 2rem;
   }
   .home__img {
+    top: 250px;
     width: 200px;
   }
 }
