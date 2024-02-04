@@ -1,4 +1,4 @@
-import { injectSpeedInsights } from "@vercel/speed-insights"
+
 //Speed Insights
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 //Web Analytics
