@@ -5,8 +5,10 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=31536000, public"
+            "value": "max-age=31536000, public",
+            "cleanUrls": true
           }
+          
         ]
       }
     ],
@@ -15,6 +17,8 @@
         "source": "/(.*)",
         "destination": "https://wxrst-center.vercel.app/$1"
       }
+      
     ]
+    
   }
   
