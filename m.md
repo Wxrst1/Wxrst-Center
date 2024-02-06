@@ -120,3 +120,103 @@ git push -u origin main
 git remote add origin https://github.com/Wxrst1/Wxrst-Center.git
 git branch -M main
 git push -u origin main
+
+
+
+           <!--===== ABOUT 
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/boku_no_hero_academia___izuku_midoriya__deku__png_by_dglproductions_dejfxnt-pre.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Wxrst</h2>
+                        <p class="about__text"><strong style="font-size: 20px;">Just a little streamer, doing my best! I livestream myself playing Rocket League, Fortnite, GTA, and more! In my spare time I teach myself how to program more efficiently and make some websites.
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>=====-->
+
+            <!--===== GOALS 
+            <section class="skills section" id="goals">
+                <h2 class="section-title">Goals</h2>
+
+                <div class="goal__container bd-grid">          
+                    <div>
+                        <h2 class="goal__subtitle">Main Goals</h2>
+                        <p class="skills__text">My main goals are: <br>
+                            Twitch - 500 Followers <br>
+                            Instagram & TikTok - 1K followers <br>
+                            And as an extra goal, I do have a Discord Server in which I plan to have 500 members!</p><br>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-tiktok goal__icon'></i>
+                                <span class="skills__name">TikTok</span>
+                            </div>
+                            <div class="prog__bar perc_tiktok">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">10,9%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-twitch goal__icon' ></i>
+                                <span class="skills__name">Twitch</span>
+                            </div>
+                            <div class="prog__bar perc_twitch">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">17,7%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-instagram goal__icon'></i>
+                                <span class="skills__name">Instagram</span>
+                            </div>
+                            <div class="prog__bar perc_insta">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">1,4%</span>
+                            </div>
+                        </div>
+                        <div class="goal__data">
+                            <div class="goal__name">
+                                <i class='bx bxl-discord goal__icon' ></i>
+                                <span class="skills__name">Discord</span>
+                            </div>
+                            <div class="prog__bar perc_disc">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">1,2%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/Deku-PNG-Photos.png" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>=====-->
+
+              <!--===== WORK 
+            <section class="work section" id="Works">
+                <h2 class="section-title">Works</h2>
+                <div id="work-container">
+                   
+                </div>
+            </section> =====-->
+
+                                    <!--===== recaptcha button 
+                        <button  class="g-recaptcha" 
+                        data-sitekey="6LcQ25QjAAAAAOZNiNFkQ4YujPcOYpeR5ZGSC2eH" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Submit</button> =====-->

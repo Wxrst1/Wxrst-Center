@@ -4,19 +4,19 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
+  /*===== Colors =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 270;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+  /*===== Font and Typographic=====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+  /*===== Margins =====*/
   --mb-2: 1rem;
   --mb-4: 0.5rem;
   --mb-5: 2.5rem;
@@ -24,16 +24,16 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
-    /* Cores do tema claro */
+    /* Light Theme Colors */
     --primary-color-light: #ffffff;
     --secondary-color-light: #1f1f1f;
   
   
-    /* Cores do tema escuro */
+    /* Dark Theme Colors */
     --primary-color-dark: #121212;
     --secondary-color-dark: #f0f0f0;
   
-    /* Cores atuais */
+    /* Actual Colors */
     --primary-color: var(--primary-color-light);
     --secondary-color: var(--secondary-color-light);
 }
@@ -47,6 +47,25 @@
   }
 }
 
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Background of the scrollbar */
+::-webkit-scrollbar-track {
+  background: var(--primary-color); 
+}
+ 
+/* Scrollbar color */
+::-webkit-scrollbar-thumb {
+  background: #af59e975; 
+}
+
+/* Scrollbar color when hovering */
+::-webkit-scrollbar-thumb:hover {
+  background: #af59e970; 
+}
 
 /*===== BASE =====*/
 *, ::before, ::after {
@@ -748,7 +767,7 @@ div > div > div:last-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(18, 76, 131, 0.5); /* fundo semi-transparente */
+  background: rgba(18, 76, 131, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -766,7 +785,7 @@ div > div > div:last-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(106, 13, 173, 0.5); /* fundo semi-transparente */
+  background: rgba(106, 13, 173, 0.5); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -784,7 +803,7 @@ div > div > div:last-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(107, 142, 35, 0.5); /* fundo semi-transparente */
+  background: rgba(107, 142, 35, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -980,7 +999,7 @@ div > div > div:last-child {
   box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
 }
 
-  /* Estilo para a tela de carregamento */
+  /* Loading Screen */
   .loading-screen {
     position: fixed;
     left: 0;
@@ -995,9 +1014,9 @@ div > div > div:last-child {
     z-index: 1000;
 }
 
-/* Estilo para o logo */
+/* Logo  */
 .loading-logo {
-    width: 100px; /* Ajuste o tamanho do logo conforme necessário */
+    width: 100px; 
 }
 @keyframes spin {
   0% { transform: rotate(0deg); }
