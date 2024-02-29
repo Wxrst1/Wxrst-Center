@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wxrst-center.vercel.app/sitemap.xml
