@@ -265,3 +265,6 @@ cards.forEach(card => {
             loadingScreen.style.display = 'none';
         }, 300); // Deve corresponder à duração da transição no CSS
     });
+
+
+   
