@@ -793,32 +793,7 @@ div > div > div:last-child {
 }
 
 /* ===== Clip =====*/
-.game-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.game-category {
-  display: flex;
-  flex-direction: row;
-}
-
-.game {
-  flex-shrink: 0;
-  height: 100%;
-  margin-right: 50px;
-  border-radius: 10px;
-  background: #eee;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-}
 
 .clip {
   text-align: center;
@@ -996,7 +971,39 @@ div > div > div:last-child {
   outline: none;
   box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
 }
+@media (max-width: 768px) {
+  /* Estilos para telas menores que 768px (tablets e celulares) */
 
+  .clip-card {
+    width: calc(100% - 20px); /* Ajusta a largura para melhor caber em telas menores */
+    margin: 10px 0; /* Ajusta a margem para melhor espaçamento */
+  }
+
+  .overlay .soon-text,
+  .soon-text {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para melhor legibilidade */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Estilos para telas menores que 576px (celulares) */
+
+  .clip-card {
+    width: 90%; /* Reduz ainda mais a largura para melhor caber em celulares */
+  }
+
+  .clip-details {
+    padding: 5px; /* Ajusta o acolchoamento para telas menores */
+  }
+
+  .clip-details h3 {
+    font-size: 1.2rem; /* Reduz o tamanho da fonte do título para melhor legibilidade */
+  }
+
+  .clip-details p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do parágrafo para melhor legibilidade */
+  }
+}
 
 /*////////////////////////////////*/
 
@@ -1033,28 +1040,28 @@ div > div > div:last-child {
   display: flex; /* Make the section a flex container */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Optionally center horizontally too */
-  padding: 100px 100px;
+  padding: 5vw 5vw;
 }
 .contentBx {
   position: relative;
-  max-width: 600px;
-  z-index: 1000; 
+  max-width: 60rem;
+  z-index: 1; 
 }
 
 .contentBx h2 {
-  font-size: 60px;
+  font-size: 1.6rem; /* Already in rem */
   color: #fff;
   text-transform: uppercase;
 }
 
 .contentBx p {
-  font-size: 18px;
-       color: #fff;
+  font-size: 1rem; /* Converted from pixels to rem */
+  color: #fff;
 }
 
 .contentBx .countdown {
   display: flex;
-  margin: 20px 0;
+  margin: 1.25rem 0; /* Converted from pixels to rem */
 }
 
 .contentBx .countdown .time {
@@ -1063,18 +1070,18 @@ div > div > div:last-child {
   align-items: center;
   flex-direction: column;
   background: #fff;
-  margin-right: 20px;
-  font-size: 48px;
-  min-width: 110px;
+  margin-right: 1.25rem; /* Converted from pixels to rem */
+  font-size: 3rem; /* Converted from pixels to rem */
+  min-width: 7rem; /* Converted from pixels to rem */
   font-weight: 700;
-  padding: 10px 5px 15px;
-   border-radius: 4px;
-   color: #1e1e1f
+  padding: 0.625rem 0.3125rem 0.9375rem; /* Converted from pixels to rem */
+  border-radius: 4px;
+  color: #1e1e1f;
 }
 
 .contentBx .countdown .time span {
-  margin-top: -10px;
-  font-size: 20px;
+  margin-top: -0.625rem; /* Converted from pixels to rem */
+  font-size: 1.25rem; /* Converted from pixels to rem */
   font-weight: 600;
   color: #312747;
 }
@@ -1082,85 +1089,164 @@ div > div > div:last-child {
 .contentBx a {
   cursor: pointer;
   position: relative;
-  margin-top: 10px;
+  margin-top: 0.625rem; /* Converted from pixels to rem */
   display: inline-block;
   background: #1e1e1f;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem; /* Converted from pixels to rem */
   letter-spacing: 2px;
-  padding: 15px 35px;
+  padding: 0.9375rem 2.1875rem; /* Converted from pixels to rem */
   text-decoration: none;
   border-radius: 40px;
 }
 
-.newsletter
-{
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600;
-    padding: 60px;
-    background: #fff;
-    z-index: 1000;
-    box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
 
+.newsletter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem; /* Converted from pixels to rem (assuming based on content) */
+  padding: 3.75rem; /* Converted from pixels to rem */
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
 }
-.newsletter.actived
-{
-    visibility: visible;
-    opacity: 1;
+.newsletter.actived {
+  visibility: visible;
+  opacity: 1;
 }
-
-.newsletter h2 
-{
-    font-size: 48px;
-    color: #312747;
-}
-.newsletter h2 
-{
-    font-size: 20px;
-    color: #312747;
-}
-.newsletter p
-{
-    font-size: 15px;
-    color: #312747;
+.newsletter h2 {
+  font-size: 3rem; /* Converted from pixels to rem */
+  color: #312747;
 }
 
-.newsletter .inputBox 
-{
-    margin-top: 20px;
+.newsletter h2 {
+  font-size: 3rem; /* Converted from pixels to rem */
+  color: #312747;
 }
-.newsletter .inputBox input
-{
-    padding: 10px;
-    outline: none;
-    width: 300px;
-    font-size: 18px;
-    border: 1px solid #999;
+
+.newsletter p {
+  font-size: 0.9375rem; /* Converted from pixels to rem */
+  color: #312747;
 }
-.newsletter .inputBox input[type = "submit"]
-{
-    padding: 10px;
-    outline: none;
-    width: 140px;
-    color : #fff;
-    background: #181818;
-    border: 1px solid #2a2a2b;
-    letter-spacing: 2px;
-    box-sizing: border-box;
-    cursor: pointer;
+
+
+.newsletter .inputBox {
+  margin-top: 1.25rem; /* Converted from pixels to rem */
 }
-.newsletter .close
-{
-    position: absolute;
-    top:20px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+.newsletter .inputBox input {
+  padding: 0.625rem; /* Converted from pixels to rem */
+  outline: none;
+  width: 18.75rem; /* Converted from pixels to rem */
+  font-size: 1.125rem; /* Converted from pixels to rem */
+  border: 1px solid #999;
+}
+.newsletter .inputBox input[type="submit"] {
+  padding: 1rem;
+  outline: none;
+  width: 8.75rem; /* Assuming a base font size of 16px */
+  color: #fff;
+  background: #181818;
+  border: 1px solid #2a2a2b;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.newsletter .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+
+  .sectionSoon {
+    padding: 3vw; /* Adjust padding for smaller screens */
+  }
+
+  .contentBx {
+    max-width: 100%; /* Set max-width to 100% for full width on small screens */
+  }
+
+  .contentBx .countdown .time {
+    font-size: 2rem; /* Adjust font size for better readability */
+    min-width: 6rem; /* Adjust minimum width for smaller layouts */
+    padding: 0.5rem 0.25rem 0.75rem; /* Adjust padding for smaller elements */
+  }
+
+  .contentBx .countdown .time span {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .contentBx a {
+    font-size: 1rem; /* Adjust font size for buttons */
+    padding: 0.75rem 1.5rem; /* Adjust padding for smaller buttons */
+  }
+
+  .newsletter {
+    width: 90%; /* Set width to 90% for better fit on small screens */
+    padding: 2.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .newsletter .inputBox input {
+    width: 100%; /* Set width to 100% for full width input field */
+  }
+
+  /* Add more styles for other breakpoints as needed */
+}
+@media screen and (max-width: 576px) {
+  /* Styles for screens smaller than 576px (mobile devices) */
+
+  .sectionSoon {
+    flex-direction: column; /* Switch to a column layout for better readability */
+    padding: 2vw; /* Further reduce padding for smaller screens */
+  }
+
+  .contentBx {
+    max-width: 90%; /* Adjust max-width for better fit on mobile */
+  }
+
+  .contentBx .countdown {
+    flex-direction: row; /* Switch to a row layout for better use of space */
+    justify-content: space-between; /* Space out countdown elements */
+  }
+
+  .contentBx .countdown .time {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    min-width: 3.4rem;
+    padding: 0.4rem 0.2rem 0.6rem; /* Adjust padding for smaller elements */
+  }
+
+  .contentBx .countdown .time span {
+    font-size: 0.7rem; /* Adjust font size for readability */
+  }
+
+  .contentBx a {
+    font-size: 0.9rem; /* Adjust font size for buttons */
+    padding: 0.6rem 1rem; /* Adjust padding for smaller buttons */
+  }
+
+  .newsletter {
+    width: 80%; /* Reduce width further for better fit on mobile */
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .newsletter .inputBox {
+    margin-top: 0.75rem; /* Adjust margin for better spacing */
+  }
+
+  .newsletter .inputBox input {
+    width: 90%; /* Adjust width for better fit on mobile */
+  }
+
+  /* Add more styles for other breakpoints as needed */
 }
