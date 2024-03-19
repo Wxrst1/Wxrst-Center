@@ -1,3 +1,4 @@
+/*===== PARALLAX  =====*/
 var container = document.getElementById('container');
 window.onmousemove = function(e) {
     var x = - e.clientX/5, 

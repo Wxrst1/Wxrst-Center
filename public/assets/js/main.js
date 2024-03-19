@@ -83,6 +83,7 @@ sr.reveal('.clip, .section-title, .clip-container, .clip-card, .clip-img, .imgRo
 sr.reveal('.clip-card, .soon-text', {});
 sr.reveal('.home__social-icon-tiktok, .home__social-icon-twitch, .home__social-icon-instagram, .home__social-icon-discord', {});
 sr.reveal('.work, .section',{delay: 100})
+sr.reveal('.contentBx, .countdown, .time')
 
 
 
@@ -162,14 +163,7 @@ fetch('https://discord.com/api/webhooks/1153295041754841219/eznHPePidZlbBWXPA7oS
     console.error('Error:', error);
 });
 
-/*===== PARALLAX  =====*/
-var container = document.getElementById('container');
-window.onmousemove = function(e) {
-    var x = - e.clientX/5, 
-    y = - e.clientY/5;
-    container.style.backgroundPositionX = x + 'px';
-    container.style.backgroundPositionY = y + 'px';
-}
+
 
 /*===== THEME [DARK/LIGHT] =====*/
 function toggleTheme() {
@@ -233,38 +227,37 @@ function toggleTheme() {
     changeIcon();
   });
   
-  // Seleciona todos os cartões
+
 const cards = document.querySelectorAll('.clip-card');
 
 cards.forEach(card => {
-    // Adiciona um ouvinte de eventos de clique a cada cartão
+   
     card.addEventListener('click', (e) => {
-        // Verifica se o overlay já está mostrando
+     
         const overlayShowing = card.classList.contains('show-overlay');
 
-        // Remove a classe 'show-overlay' de todos os cartões
         cards.forEach(card => card.classList.remove('show-overlay'));
 
-        // Se o overlay não estava mostrando, adiciona a classe 'show-overlay'
+        
         if (!overlayShowing) {
             card.classList.add('show-overlay');
         }
 
-        // Previne o evento de clique se o overlay não estava mostrando
+       
         if (!overlayShowing && e.target.tagName === 'A') {
             e.preventDefault();
         }
     });
 });
 
-       // Quando o conteúdo do site estiver totalmente carregado
+      
        window.addEventListener('load', () => {
-        // Esconde a tela de carregamento
+       
         const loadingScreen = document.getElementById('loadingScreen');
         loadingScreen.style.opacity = '0';
         setTimeout(() => {
             loadingScreen.style.display = 'none';
-        }, 300); // Deve corresponder à duração da transição no CSS
+        }, 300); 
     });
 
 
@@ -281,3 +274,70 @@ cards.forEach(card => {
       badge.textContent = state;
     }
     
+    //timer
+    var newYear = new Date('Jun 21, 2024 23:59:00').getTime();
+
+function counter(){
+    let dateCurrent =  new Date().getTime(),
+        timeLeft = newYear - dateCurrent;
+     let second = 1000,
+        minute  = second * 60,
+        hour    = minute * 60,
+        day     = hour * 24;
+    let dayLeft     =  addZero(Math.floor(timeLeft/ day), 3),
+        hourLeft    =  addZero(Math.floor((timeLeft % day)/ hour), 2),
+        minuteLeft  =  addZero(Math.floor((timeLeft % hour)/minute), 2),
+        secondLeft  =  addZero(Math.floor((timeLeft % minute)/ second), 2);
+
+
+    function addZero (num, count) {
+        return num.toString().padStart(count, "0");
+    }
+
+    document.getElementById("day").innerHTML = dayLeft;
+    document.getElementById("hour").innerHTML = hourLeft;
+    document.getElementById("minute").innerHTML = minuteLeft;
+    document.getElementById("second").innerHTML = secondLeft;
+
+}
+
+setInterval(() => {
+    counter();
+}, 1000);
+
+//new
+function toggle() {
+    var newsletter = document.querySelector('.newsletter');
+    newsletter.classList.toggle('actived');
+};
+
+// Importando biblioteca XMLHttpRequest
+const xhr = new XMLHttpRequest();
+
+// Evento para submit do formulário
+document.getElementById('userEmailForm').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // Recuperando email do usuário
+  const userEmail = document.getElementById('userEmail').value;
+
+  // Criando objeto para o webhook
+  const data = {
+    content: `Nova inscrição: ${userEmail}`, // Mensagem do email
+  };
+
+  // Enviando o email para o webhook
+  const webhookUrl = 'https://discord.com/api/webhooks/1219642274284306432/CjI97hnIvBJ3apnLUMPVIu2iVcjw6ejpXFWn70EwlnLNC3PACfvZG3XOuay-PHhZM2sd'; // Substitua por seu URL do webhook Discord
+  xhr.open('POST', webhookUrl);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(data));
+
+  // Limpando o campo de email
+  document.getElementById('userEmail').value = '';
+
+  // Mensagem de sucesso
+  alert('Seu email foi enviado com sucesso!');
+});
+
+
+

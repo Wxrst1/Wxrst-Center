@@ -762,8 +762,8 @@ div > div > div:last-child {
 
 .Visit {
   --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(89, 177, 250);
-  --btn-bg-2: rgb(31, 136, 255);
+  --btn-bg-1: rgb(229, 97, 255);
+  --btn-bg-2: rgb(125, 26, 182);
   --btn-bg-color: hsla(360 100% 100% / 1);
   --radii: 0.5rem;
   cursor: pointer;
@@ -1028,4 +1028,139 @@ div > div > div:last-child {
 .logo {
   animation: spin 2s linear infinite;
 }
+.sectionSoon {
+  position: relative;
+  display: flex; /* Make the section a flex container */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Optionally center horizontally too */
+  padding: 100px 100px;
+}
+.contentBx {
+  position: relative;
+  max-width: 600px;
+  z-index: 1000; 
+}
 
+.contentBx h2 {
+  font-size: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contentBx p {
+  font-size: 18px;
+       color: #fff;
+}
+
+.contentBx .countdown {
+  display: flex;
+  margin: 20px 0;
+}
+
+.contentBx .countdown .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  margin-right: 20px;
+  font-size: 48px;
+  min-width: 110px;
+  font-weight: 700;
+  padding: 10px 5px 15px;
+   border-radius: 4px;
+   color: #1e1e1f
+}
+
+.contentBx .countdown .time span {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #312747;
+}
+
+.contentBx a {
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+  background: #1e1e1f;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.newsletter
+{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600;
+    padding: 60px;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.newsletter.actived
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.newsletter h2 
+{
+    font-size: 48px;
+    color: #312747;
+}
+.newsletter h2 
+{
+    font-size: 20px;
+    color: #312747;
+}
+.newsletter p
+{
+    font-size: 15px;
+    color: #312747;
+}
+
+.newsletter .inputBox 
+{
+    margin-top: 20px;
+}
+.newsletter .inputBox input
+{
+    padding: 10px;
+    outline: none;
+    width: 300px;
+    font-size: 18px;
+    border: 1px solid #999;
+}
+.newsletter .inputBox input[type = "submit"]
+{
+    padding: 10px;
+    outline: none;
+    width: 140px;
+    color : #fff;
+    background: #181818;
+    border: 1px solid #2a2a2b;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.newsletter .close
+{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
