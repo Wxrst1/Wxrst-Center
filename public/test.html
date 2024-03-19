@@ -1,4 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="wxrst, wxrst center, money, earn money, learn how to">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/796eebc1-59d0-4025-a4e6-5770f51c8c6b.webp">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' async>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <title>Wxrst Center</title>
+    </head>
+    <body>
+            <div class="loading-screen" id="loadingScreen">
+                <img src="assets/img/796eebc1-59d0-4025-a4e6-5770f51c8c6b.webp" alt="Logo" class="logo">
+            
+            </div>
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">Wxrst</a>
+                </div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="https://wxrst-center.vercel.app" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="https://wxrst-center.vercel.app#Clips" class="nav__link">Clips</a></li>
+                        <li class="nav__item"><a href="https://wxrst-center.vercel.app#contact" class="nav__link">Contact</a></li>
+                       <li class="nav__item">Theme : <button class="nav__item" id="theme-button"> 
+                            <i id="theme-icon" class='bx bxs-sun'></i>
+                        </button></li>                      
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Wxrst</span><br></h1>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=KKAM57BCPB536" target="_blank" class="btn-donate">Donate</a>
+                </div>                
+            
 
-<div class="overlay">
-  <span class="soon-text">🔒</span>
-</div>
+            </section>
+    <!--===== WORK =====-->
+    <section class="work section" id="Works">
+        
+        <div class="work-container">
+    
+            <div class="work-card">
+                <img src="/public/assets/img/OIG (1).jpg"  class="work-img">
+                
+                <div class="work-details"style="text-align:justify">
+                    <h3>Avlon</h3>
+                    <p>
+                        State: <span class="badge" data-state="Done"></span><br>
+                        Framework: Node.js<br>
+                        Langueage: Javascript<br>
+                        Libary: Discord.js
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=789625316171317348&permissions=8&scope=bot"   target="_blank"  class="Invite">Invite</a>
+                    <a href="https://avlon-site.vercel.app" target="_blank" class="Visit">Preview
+                    </a>
+                </div>
+                
+            
+            </div>
+            <div class="work-card">
+                <img src="/public/assets/img/OIG1.jpg"  class="work-img">
+                
+                <div class="work-details" style="text-align:justify">
+                    <h3>The Mind's Abyss</h3>
+                    <p>
+                        State: <span class="badge" data-state="In Progress"></span><br>
+                        Game Engine: Unreal Engine 5.3.2<br>
+                        Langueage: Blueprints / C++<br>
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=789625316171317348&permissions=8&scope=bot"   target="_blank"  class="Invite">Invite</a>
+                    <a href="https://avlon-site.vercel.app" target="_blank" class="Visit">Preview
+                    </a>
+                </div>
+                
+            
+            </div>
+            
+        </div>
+        
+    </section>
+          
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact__container bd-grid">
+                    <form action="https://api.web3forms.com/submit" id="demo-form" method="POST" class="contact__form">
+                        <input type="hidden" name="access_key" value="54b7d82d-aae1-4890-8c70-3114c05d0d90">
+                        <input type="text" id="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                        title="Valid e-mail address including top-level domain" id="email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input type="hidden" name="from_name" value="Website Contact">
+                        <button  class="contact__button button" type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
+            <div id="result"> </div>
+        </main>
+        <footer class="footer">
+            <p class="footer__title">✖</p>
+            <div class="footer__social">
+                <a href="https://tiktok.com/@wxrst._" class="footer__icon"><i class='bx bxl-tiktok' ></i></a>
+                <a href="https://www.twitch.tv/wxrst_" class="footer__icon"><i class='bx bxl-twitch' ></i></a>
+                <a href="https://www.instagram.com/wxrst._ " class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href=" https://discord.gg/cuaXUHDXMt"class="footer__icon"><i class='bx bxl-discord ' ></i></a>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+
+              <script defer src="/_vercel/speed-insights/script.js"></script>
+                <script defer src="/_vercel/insights/script.js"></script>
+    </body>
+</html>
