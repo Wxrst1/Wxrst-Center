@@ -328,27 +328,6 @@ img {
   100% { color: #7289DA; }
 }
 
-.Visit {
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(89, 177, 250);
-  --btn-bg-2: rgb(31, 136, 255);
-  --btn-bg-color: hsla(360 100% 100% / 1);
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-  min-width: 120px;
-  min-height: 44px;
-  font-size: var(--size, 1rem);
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
-  border: none;
-  border-radius: var(--radii);
-  color: var(--btn-bg-color);
-  /* box-shadow: 0px 0px 20px rgba(71, 197, 255, 0.5), 0px 5px 5px -1px rgba(58, 192, 233, 0.25), inset 4px 4px 8px rgba(175, 236, 255, 0.5), inset -4px -4px 8px rgba(19, 144, 216, 0.35); */
-}
 
 
 
@@ -358,11 +337,11 @@ img {
   --btn-bg-1: rgb(229, 97, 255);
   --btn-bg-2: rgb(173, 31, 255);
   --btn-bg-color: hsla(360 100% 100% / 1);
-  --radii: 0.5em;
+  --radii: 0.5rem;
   cursor: pointer;
-  padding: 0.9em 1.4em;
-  min-width: 120px;
-  min-height: 44px;
+  padding: 0.9rem 1.4rem;
+  min-width: 7.5rem; 
+  min-height: 2.75rem;
   font-size: var(--size, 1rem);
   font-family: "Segoe UI", system-ui, sans-serif;
   font-weight: 500;
@@ -707,7 +686,7 @@ img {
 
 .work-details h3 {
   margin-top: 0;
-  display: inline-block;
+
   color: var(--primary-color);
 }
 
@@ -722,14 +701,97 @@ img {
   border-radius: 0.375rem;
   font-size: 0.75rem;
   font-weight: 600;
+
+}
+.badge-dev {
   background-color: #2581eb59;
   color: rgb(56, 69, 253);
+}
+
+.badge-in-progress {
+  background-color: #ffc10769;
+  color: #af8909;
+}
+
+.badge-done {
+  background-color: #1bdd4893;
+  color: rgb(22, 119, 9);
+}
+.buttons {
+  position: absolute; 
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 div > div > div:last-child {
   display:flex; 
   justify-content:center; 
 }
+.Invite {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(54, 54, 54);
+  --btn-bg-2: rgb(12, 12, 11);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  min-width: 7.5rem;
+  min-height: 2.75rem;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  margin: 0.3125rem;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  /* box-shadow: 0px 0px 20px rgba(255, 212, 71, 0.5), 0px 5px 5px -1px rgba(233, 192, 58, 0.25), inset 4px 4px 8px rgba(255, 230, 175, 0.5), inset -4px -4px 8px rgba(216, 137, 19, 0.35); */
+}
+
+.Invite:hover {
+  background-position: right top;
+}
+
+.Invite:is(:focus, :focus-within,:active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+.Visit {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(89, 177, 250);
+  --btn-bg-2: rgb(31, 136, 255);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0.3125rem; 
+  min-width: 7.5rem; 
+  min-height: 2.75rem;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  /* box-shadow: 0px 0px 20px rgba(71, 197, 255, 0.5), 0px 5px 5px -1px rgba(58, 192, 233, 0.25), inset 4px 4px 8px rgba(175, 236, 255, 0.5), inset -4px -4px 8px rgba(19, 144, 216, 0.35); */
+}
+
+.Visit:hover {
+  background-position: right top;
+}
+
+.Visit:is(:focus, :focus-within,:active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
 /* ===== Clip =====*/
 .game-slider {
   display: flex;
@@ -937,67 +999,7 @@ div > div > div:last-child {
 
 
 /*////////////////////////////////*/
-.Invite {
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(22, 22, 22);
-  --btn-bg-2: rgb(12, 12, 11);
-  --btn-bg-color: hsla(360 100% 100% / 1);
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-  min-width: 120px;
-  min-height: 44px;
-  font-size: var(--size, 1rem);
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
-  border: none;
-  border-radius: var(--radii);
-  color: var(--btn-bg-color);
-  /* box-shadow: 0px 0px 20px rgba(255, 212, 71, 0.5), 0px 5px 5px -1px rgba(233, 192, 58, 0.25), inset 4px 4px 8px rgba(255, 230, 175, 0.5), inset -4px -4px 8px rgba(216, 137, 19, 0.35); */
-}
 
-.Invite:hover {
-  background-position: right top;
-}
-
-.Invite:is(:focus, :focus-within,:active) {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
-}
-
-.Visit {
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(89, 177, 250);
-  --btn-bg-2: rgb(31, 136, 255);
-  --btn-bg-color: hsla(360 100% 100% / 1);
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-  min-width: 120px;
-  min-height: 44px;
-  font-size: var(--size, 1rem);
-  font-family: "Segoe UI", system-ui, sans-serif;
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
-  border: none;
-  border-radius: var(--radii);
-  color: var(--btn-bg-color);
-  /* box-shadow: 0px 0px 20px rgba(71, 197, 255, 0.5), 0px 5px 5px -1px rgba(58, 192, 233, 0.25), inset 4px 4px 8px rgba(175, 236, 255, 0.5), inset -4px -4px 8px rgba(19, 144, 216, 0.35); */
-}
-
-.Visit:hover {
-  background-position: right top;
-}
-
-.Visit:is(:focus, :focus-within,:active) {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
-}
 
   /* Loading Screen */
   .loading-screen {

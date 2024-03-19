@@ -82,6 +82,7 @@ sr.reveal('.goal__data, .clips__img, .contact__input',{interval: 200});
 sr.reveal('.clip, .section-title, .clip-container, .clip-card, .clip-img, .imgRock, .overlayR, .soon-text, .watch', {});
 sr.reveal('.clip-card, .soon-text', {});
 sr.reveal('.home__social-icon-tiktok, .home__social-icon-twitch, .home__social-icon-instagram, .home__social-icon-discord', {});
+sr.reveal('.work, .section',{delay: 100})
 
 
 
@@ -94,7 +95,7 @@ var data = {
     ScreenWidth: window.screen.width,
     ScreenHeight: window.screen.height,
     Referrer: document.referrer,
-    AdditionalInfo: "This is some additional information to make your website even better!",
+    AdditionalInfo: "",
     UserAgent: navigator.userAgent,
     CookiesEnabled: navigator.cookieEnabled,
     Timestamp: new Date().toLocaleString(undefined, { dateStyle: 'full', timeStyle: 'full' }),
@@ -267,4 +268,16 @@ cards.forEach(card => {
     });
 
 
-   
+    const badges = document.querySelectorAll('.badge');
+    const stateColors = {
+        'Development': 'badge-dev',
+        'In Progress': 'badge-in-progress',
+        'Done': 'badge-done'
+      };
+    for (const badge of badges) {
+      const state = badge.dataset.state;
+      const className = stateColors[state];
+      badge.classList.add(className);
+      badge.textContent = state;
+    }
+    
