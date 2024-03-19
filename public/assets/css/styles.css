@@ -615,7 +615,8 @@ img {
 
 @media screen and (min-width: 992px) {
   .bd-grid {
-   
+    margin-left: auto;
+    margin-right: auto;
   }
   .home {
     padding: 10rem 0 2rem;
@@ -1049,13 +1050,13 @@ div > div > div:last-child {
 
 .contentBx h2 {
   font-size: 1.6rem; /* Already in rem */
-  color: #fff;
+  color: var(--secondary-color);
   text-transform: uppercase;
 }
 
 .contentBx p {
   font-size: 1rem; /* Converted from pixels to rem */
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .contentBx .countdown {
@@ -1068,21 +1069,21 @@ div > div > div:last-child {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #fff;
+  background: var(--secondary-color);
   margin-right: 1.25rem; /* Converted from pixels to rem */
   font-size: 3rem; /* Converted from pixels to rem */
   min-width: 7rem; /* Converted from pixels to rem */
   font-weight: 700;
   padding: 0.625rem 0.3125rem 0.9375rem; /* Converted from pixels to rem */
   border-radius: 4px;
-  color: #1e1e1f;
+  color: var(--primary-color);
 }
 
 .contentBx .countdown .time span {
   margin-top: -0.625rem; /* Converted from pixels to rem */
   font-size: 1.25rem; /* Converted from pixels to rem */
   font-weight: 600;
-  color: #312747;
+  color: var(--primary-color);
 }
 
 .contentBx a {
@@ -1090,8 +1091,8 @@ div > div > div:last-child {
   position: relative;
   margin-top: 0.625rem; /* Converted from pixels to rem */
   display: inline-block;
-  background: #1e1e1f;
-  color: #fff;
+  background:  var(--secondary-color);;
+  color:  var(--primary-color);;
   font-size: 1.25rem; /* Converted from pixels to rem */
   letter-spacing: 2px;
   padding: 0.9375rem 2.1875rem; /* Converted from pixels to rem */
@@ -1107,7 +1108,7 @@ div > div > div:last-child {
   transform: translate(-50%, -50%);
   width: 60rem; /* Converted from pixels to rem (assuming based on content) */
   padding: 3.75rem; /* Converted from pixels to rem */
-  background: #fff;
+  background:  var(--primary-color);
   z-index: 1000;
   box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
   visibility: hidden;
@@ -1120,17 +1121,17 @@ div > div > div:last-child {
 }
 .newsletter h2 {
   font-size: 3rem; /* Converted from pixels to rem */
-  color: #312747;
+  color: var(--secondary-color);
 }
 
 .newsletter h2 {
   font-size: 3rem; /* Converted from pixels to rem */
-  color: #312747;
+  color: var(--secondary-color);
 }
 
 .newsletter p {
   font-size: 0.9375rem; /* Converted from pixels to rem */
-  color: #312747;
+  color:  var(--secondary-color);
 }
 
 

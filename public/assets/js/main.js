@@ -50,21 +50,27 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
-    const scrollY = window.pageYOffset
+  const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+  // Remover a classe "active" de todos os links antes de adicionar a qualquer um
+  const activeLinks = document.querySelectorAll('.nav__menu a.active')
+  activeLinks.forEach(link => link.classList.remove('active'))
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-        }
-    })
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute('id')
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+      const matchingLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+      matchingLink.classList.add('active')
+    }
+  })
 }
+
 window.addEventListener('scroll', scrollActive)
+
+
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
